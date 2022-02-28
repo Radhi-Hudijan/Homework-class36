@@ -1,0 +1,80 @@
+{
+  "node": "v16.13.1",
+  "system": {
+    "manufacturer": "Apple Inc.",
+    "model": "MacBookAir7,2"
+  },
+  "cpu": {
+    "manufacturer": "Intel®",
+    "brand": "Core™ i5-5350U",
+    "speed": 1.8
+  },
+  "memory": "8 GB",
+  "osInfo": {
+    "platform": "darwin",
+    "distro": "macOS",
+    "release": "11.6"
+  },
+  "vscodeInfo": {
+    "version": "1.64.2",
+    "extensions": [
+      "aaron-bond.better-comments",
+      "azemoh.one-monokai",
+      "be5invis.vscode-icontheme-nomo-dark",
+      "bierner.github-markdown-preview",
+      "bierner.markdown-checkbox",
+      "bierner.markdown-emoji",
+      "bierner.markdown-footnotes",
+      "bierner.markdown-preview-github-styles",
+      "bierner.markdown-yaml-preamble",
+      "DavidAnson.vscode-markdownlint",
+      "dbaeumer.jshint",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens",
+      "eg2.vscode-npm-script",
+      "esbenp.prettier-vscode",
+      "evgeniypeshkov.syntax-highlighter",
+      "firefox-devtools.vscode-firefox-debug",
+      "formulahendry.code-runner",
+      "GitHub.vscode-pull-request-github",
+      "hdg.live-html-previewer",
+      "HookyQR.beautify",
+      "johnpapa.winteriscoming",
+      "ms-azuretools.vscode-docker",
+      "ms-edgedevtools.vscode-edge-devtools",
+      "ritwickdey.LiveServer",
+      "streetsidesoftware.code-spell-checker",
+      "vscodevim.vim",
+      "WallabyJs.quokka-vscode",
+      "xabikos.JavaScriptSnippets",
+      "zhuangtongfa.material-theme"
+    ],
+    "userSettings": {
+      "workbench.startupEditor": "none",
+      "files.autoSave": "afterDelay",
+      "editor.fontSize": 14,
+      "editor.formatOnSave": true,
+      "quokka.compactMessageOutput": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "eslint.debug": true,
+      "cSpell.userWords": [
+        "أحبك"
+      ],
+      "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+      "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+      "vscode-edge-devtools.mirrorEdits": true,
+      "workbench.editor.untitled.hint": "hidden",
+      "workbench.iconTheme": "vs-nomo-dark",
+      "quokka.showOutputOnStart": true,
+      "quokka.startViewStatusBar": true,
+      "code-runner.showExecutionMessage": false,
+      "code-runner.clearPreviousOutput": true,
+      "workbench.colorTheme": "Winter is Coming (Dark Blue)",
+      "settingsSync.ignoredSettings": [
+        "vim.autoSwitchInputMethod.obtainIMCmd"
+      ],
+      "vim.useCtrlKeys": false,
+      "quokka.automaticRestart": false
+    }
+  }
+}

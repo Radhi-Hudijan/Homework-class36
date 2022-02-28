@@ -1,0 +1,5 @@
+
+*** Spell Checker Report ***
+
+ex2-aboutMe/index.js:17:25 - Unknown word (Radhi)
+ex2-aboutMe/index.js:17:31 - Unknown word (Hudijan)

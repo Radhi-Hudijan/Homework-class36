@@ -1,0 +1,284 @@
+2022-02-28 07:25:27 info: ----------------------------------------
+2022-02-28 07:25:27 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-02-28 07:25:27 info: ----------------------------------------
+2022-02-28 07:25:40 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js (6.059 s)
+  Generated HTML
+    ✕ HTML should be syntactically valid (223 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should contain a <ul> that is a child of <div id="bookList"> (2 ms)
+    ✓ should contain a <ul> with 3 <li> elements (2 ms)
+    ✓ should contain an <li> with title and author for each book of the `myBooks` array (5 ms)
+    ✓ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:176  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:358  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:531  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        6.24 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2022-02-28 07:28:07 info: Disclaimer turned off
+2022-02-28 07:28:17 info: ----------------------------------------
+2022-02-28 07:28:17 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-02-28 07:28:17 info: ----------------------------------------
+2022-02-28 07:28:27 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js (5.453 s)
+  Generated HTML
+    ✕ HTML should be syntactically valid (221 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should contain a <ul> that is a child of <div id="bookList"> (2 ms)
+    ✓ should contain a <ul> with 3 <li> elements (5 ms)
+    ✓ should contain an <li> with title and author for each book of the `myBooks` array (4 ms)
+    ✓ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:176  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:358  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:531  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        5.639 s, estimated 7 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2022-02-28 07:30:34 info: ----------------------------------------
+2022-02-28 07:30:34 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-02-28 07:30:34 info: ----------------------------------------
+2022-02-28 07:30:44 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js (5.227 s)
+  Generated HTML
+    ✓ HTML should be syntactically valid (147 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✕ should contain a <ul> that is a child of <div id="bookList"> (4 ms)
+    ✕ should contain a <ul> with 3 <li> elements (3 ms)
+    ✕ should contain an <li> with title and author for each book of the `myBooks` array (2 ms)
+    ✕ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › should contain a <ul> that is a child of <div id="bookList">
+
+    expect(received).toBeTruthy()
+
+    Received: null
+
+      46 |   test('should contain a <ul> that is a child of <div id="bookList">', () => {
+      47 |     const ul = document.querySelector('div[id=bookList] > ul');
+    > 48 |     expect(ul).toBeTruthy();
+         |                ^
+      49 |   });
+      50 |
+      51 |   test('should contain a <ul> with 3 <li> elements', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:48:16)
+
+  ● Generated HTML › should contain a <ul> with 3 <li> elements
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      52 |     const nodeList = document.querySelectorAll('ul > li');
+      53 |     const result = nodeList ? nodeList.length : 0;
+    > 54 |     expect(result).toBe(3);
+         |                    ^
+      55 |   });
+      56 |
+      57 |   test('should contain an <li> with title and author for each book of the `myBooks` array', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:54:20)
+
+  ● Generated HTML › should contain an <li> with title and author for each book of the `myBooks` array
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "The Design of Everyday Things"
+    Received: ""
+
+      63 |       : '';
+      64 |     state.titlesAndAuthors.forEach((string) =>
+    > 65 |       expect(result).toEqual(expect.stringContaining(string))
+         |                      ^
+      66 |     );
+      67 |   });
+      68 |
+
+      at forEach (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:65:22)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:64:28)
+
+  ● Generated HTML › should contain an <img> element for each book
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      70 |     const nodeList = document.querySelectorAll('li img');
+      71 |     const result = nodeList ? nodeList.length : 0;
+    > 72 |     expect(result).toBe(3);
+         |                    ^
+      73 |   });
+      74 | });
+      75 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:72:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 2 passed, 6 total
+Snapshots:   0 total
+Time:        5.429 s, estimated 6 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2022-02-28 07:30:47 error: *** ESLint Report ***
+
+ex1-bookList/index.js
+  38:5  error  'imageCover' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-02-28 07:31:17 info: ----------------------------------------
+2022-02-28 07:31:17 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-02-28 07:31:17 info: ----------------------------------------
+2022-02-28 07:31:28 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js (5.96 s)
+  Generated HTML
+    ✕ HTML should be syntactically valid (164 ms)
+    ✓ should have all TODO comments removed (2 ms)
+    ✓ should contain a <ul> that is a child of <div id="bookList"> (2 ms)
+    ✓ should contain a <ul> with 3 <li> elements (2 ms)
+    ✓ should contain an <li> with title and author for each book of the `myBooks` array (3 ms)
+    ✓ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:176  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:358  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:531  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        6.138 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2022-02-28 07:31:57 info: ----------------------------------------
+2022-02-28 07:31:57 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-02-28 07:31:57 info: ----------------------------------------
+2022-02-28 07:32:06 info: All unit tests passed.
+2022-02-28 07:32:11 info: All steps were completed successfully
+2022-02-28 07:36:52 info: ---------------------------------------
+2022-02-28 07:36:52 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-02-28 07:36:52 info: ---------------------------------------
+2022-02-28 07:37:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js (5.95 s)
+  Generated HTML
+    ✓ should be syntactically valid (168 ms)
+    ✓ should have all TODO comments removed
+    ✓ the body font-family should be `Arial, sans-serif` (1 ms)
+    ✓ each <li> should have the CSS class `list-item` (1 ms)
+    ✕ each <li> should rendered red (50 ms)
+
+  ● Generated HTML › each <li> should rendered red
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      40 |       (node) => window.getComputedStyle(node).color
+      41 |     );
+    > 42 |     expect(colors.every((color) => color === 'red')).toBeTruthy();
+         |                                                      ^
+      43 |   });
+      44 | });
+      45 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:42:54)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        6.182 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-02-28 07:37:11 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:17:25 - Unknown word (Radhi)
+ex2-aboutMe/index.js:17:31 - Unknown word (Hudijan)
+
+2022-02-28 07:38:43 info: ---------------------------------------
+2022-02-28 07:38:43 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-02-28 07:38:43 info: ---------------------------------------
+2022-02-28 07:38:53 info: All unit tests passed.
+2022-02-28 07:39:00 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:17:25 - Unknown word (Radhi)
+ex2-aboutMe/index.js:17:31 - Unknown word (Hudijan)
+
