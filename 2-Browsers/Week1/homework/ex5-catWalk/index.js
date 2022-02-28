@@ -21,8 +21,48 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-function catWalk() {
-  // TODO complete this function
+const image = document.querySelector('img');
+const dancingCat =
+  'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+const walkingCat = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+
+const screenWidth = window.innerWidth;
+const catImageWidth = image.width;
+
+function catReachToMiddleScreen() {
+  const midScreen = (screenWidth - catImageWidth) / 2;
+  return (
+    parseInt(image.style.left) > midScreen - 5 &&
+    parseInt(image.style.left) < midScreen + 5
+  );
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+function setTimeOutAfter5Second() {
+  setTimeout(() => {
+    image.src = walkingCat;
+    catMove = setInterval(catWalk, 50);
+  }, 5000);
+}
+function catReachRightSide() {
+  const fullScreenWidth = screenWidth - catImageWidth;
+  return parseInt(image.style.left) >= fullScreenWidth;
+}
+
+image.style.left = '0px';
+
+function catWalk() {
+  image.style.left = parseInt(image.style.left) + 10 + 'px';
+
+  if (catReachRightSide()) {
+    image.style.left = '0px';
+  }
+
+  if (catReachToMiddleScreen()) {
+    clearInterval(catMove);
+    image.src = dancingCat;
+    setTimeOutAfter5Second();
+  }
+}
+
+let catMove = setInterval(catWalk, 50);
+window.addEventListener('load', catWalk);
