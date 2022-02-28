@@ -282,3 +282,25 @@ ex2-aboutMe/index.js:17:31 - Unknown word (Hudijan)
 ex2-aboutMe/index.js:17:25 - Unknown word (Radhi)
 ex2-aboutMe/index.js:17:31 - Unknown word (Hudijan)
 
+2022-02-28 07:41:10 info: ---------------------------------------
+2022-02-28 07:41:10 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-02-28 07:41:10 info: ---------------------------------------
+2022-02-28 07:41:20 info: All unit tests passed.
+2022-02-28 07:41:26 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:17:25 - Unknown word (Radhi)
+ex2-aboutMe/index.js:17:31 - Unknown word (Hudijan)
+
+2022-02-28 07:41:46 info: ------------------------------------------
+2022-02-28 07:41:46 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2022-02-28 07:41:46 info: ------------------------------------------
+2022-02-28 07:41:50 info: All unit tests passed.
+2022-02-28 07:41:55 error: *** Spell Checker Report ***
+
+ex3-hijackLogo.js:11:57 - Unknown word (Xdpd)
+
+2022-02-28 08:34:16 info: --------------------------------------------
+2022-02-28 08:34:16 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-02-28 08:34:16 info: --------------------------------------------
+2022-02-28 08:34:30 info: All unit tests passed.
+2022-02-28 08:34:41 info: All steps were completed successfully
