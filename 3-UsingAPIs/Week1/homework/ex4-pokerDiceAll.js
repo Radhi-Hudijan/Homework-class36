@@ -27,9 +27,9 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const allPromises = dice.map((die) => rollDie(die));
+  return Promise.all(allPromises);
 }
 
 function main() {
@@ -43,3 +43,10 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/*------------------------------------------------------------------------------
+
+The reason for the Dies to continue rolling even if the promise got rejected, I think this is because we map through 
+the dice array (map is a synchronous method ) and get the results of each promise with Promise.all property.
+
+-----------------------------------------------------------------------------*/
