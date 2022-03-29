@@ -1,4 +1,5 @@
 'use strict';
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-2-gotta-catch-em-all
 
@@ -22,18 +23,68 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+const ROOT_URL = 'https://pokeapi.co/api/v2/pokemon/';
+
+async function fetchData(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Could not Fetch');
+  }
+  return response.json();
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons() {
+  const pokemonData = await fetchData(`${ROOT_URL}?offset=151&limit=151`);
+  const pokemons = pokemonData.results;
+  const select = document.createElement('select');
+  select.classList.add('select');
+
+  select.addEventListener('change', (e) => {
+    fetchImage(e.target.value);
+  });
+  document.body.appendChild(select);
+
+  pokemons.forEach((pokemon) => {
+    const option = document.createElement('option');
+    option.classList.add('option');
+    option.textContent = pokemon.name;
+    option.value = pokemon.name;
+    select.appendChild(option);
+  });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(pokemonName) {
+  try {
+    const imgUrl = `${ROOT_URL}${pokemonName}`;
+    const response = await fetch(imgUrl);
+    if (!response.ok) {
+      throw new Error('Fetching image failed');
+    }
+
+    const data = await response.json();
+    if (document.querySelector('img')) {
+      document.body.removeChild(document.querySelector('img'));
+    }
+
+    const pokemonImg = document.createElement('img');
+    console.log(data.sprites.front_default);
+    pokemonImg.src = data.sprites.front_default;
+    pokemonImg.alt = `${pokemonName}`;
+    document.body.appendChild(pokemonImg);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 function main() {
-  // TODO complete this function
+  const btnElement = document.createElement('button');
+  btnElement.classList.add('button');
+  btnElement.type = 'submit';
+  btnElement.textContent = 'Get Your Pokemon';
+  document.body.appendChild(btnElement);
+  btnElement.onclick = () => {
+    fetchAndPopulatePokemons();
+  };
 }
+
+window.addEventListener('load', main);

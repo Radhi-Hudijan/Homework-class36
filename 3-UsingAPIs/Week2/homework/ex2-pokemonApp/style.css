@@ -1,1 +1,32 @@
 /* add your styling here */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.button {
+  display: block;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background-color: blue;
+  padding: 1rem 3rem;
+}
+
+.select {
+  display: block;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(124, 124, 245);
+  padding: 0.5rem 2rem;
+  width: 60%;
+  margin: auto;
+}
+
+.option {
+  text-align: center;
+  font-size: large;
+}
