@@ -13,3 +13,8 @@
 2022-03-29 09:13:34 info: -----------------------------------------
 2022-03-29 09:13:39 info: All unit tests passed.
 2022-03-29 09:13:44 info: All steps were completed successfully
+2022-03-29 09:30:22 info: ----------------------------------------
+2022-03-29 09:30:22 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-03-29 09:30:22 info: ----------------------------------------
+2022-03-29 09:30:27 info: All unit tests passed.
+2022-03-29 09:30:32 info: All steps were completed successfully
