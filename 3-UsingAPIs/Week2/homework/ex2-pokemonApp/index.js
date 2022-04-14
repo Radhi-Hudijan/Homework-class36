@@ -23,7 +23,6 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-const ROOT_URL = 'https://pokeapi.co/api/v2/pokemon/';
 
 async function fetchData(url) {
   const response = await fetch(url);
@@ -34,7 +33,7 @@ async function fetchData(url) {
 }
 
 async function fetchAndPopulatePokemons() {
-  const pokemonData = await fetchData(`${ROOT_URL}?offset=151&limit=151`);
+  const pokemonData = await fetchData('https://pokeapi.co/api/v2/pokemon/');
   const pokemons = pokemonData.results;
   const select = document.createElement('select');
   select.classList.add('select');
@@ -55,19 +54,14 @@ async function fetchAndPopulatePokemons() {
 
 async function fetchImage(pokemonName) {
   try {
-    const imgUrl = `${ROOT_URL}${pokemonName}`;
-    const response = await fetch(imgUrl);
-    if (!response.ok) {
-      throw new Error('Fetching image failed');
-    }
+    const imgUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
 
-    const data = await response.json();
+    const data = await fetchData(imgUrl);
     if (document.querySelector('img')) {
       document.body.removeChild(document.querySelector('img'));
     }
 
     const pokemonImg = document.createElement('img');
-    console.log(data.sprites.front_default);
     pokemonImg.src = data.sprites.front_default;
     pokemonImg.alt = `${pokemonName}`;
     document.body.appendChild(pokemonImg);
@@ -84,6 +78,7 @@ function main() {
   document.body.appendChild(btnElement);
   btnElement.onclick = () => {
     fetchAndPopulatePokemons();
+    btnElement.disabled = true;
   };
 }
 

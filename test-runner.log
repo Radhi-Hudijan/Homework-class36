@@ -120,3 +120,20 @@ ex1-programmerFun/index.js
 ✖ 1 problem (1 error, 0 warnings)
 
 
+2022-04-14 01:34:12 info: ------------------------------------------
+2022-04-14 01:34:12 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-04-14 01:34:12 info: ------------------------------------------
+2022-04-14 01:34:23 info: All unit tests passed.
+2022-04-14 01:34:27 error: *** ESLint Report ***
+
+ex2-pokemonApp/index.js
+  26:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-04-14 01:34:59 info: ------------------------------------------
+2022-04-14 01:34:59 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-04-14 01:34:59 info: ------------------------------------------
+2022-04-14 01:35:09 info: All unit tests passed.
+2022-04-14 01:35:14 info: All steps were completed successfully
