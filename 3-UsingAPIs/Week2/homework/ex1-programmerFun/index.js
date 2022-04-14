@@ -25,6 +25,7 @@ async function requestData(url) {
     }
     const data = await response.json();
     console.log(data);
+    return data;
   } catch {}
 }
 
@@ -37,6 +38,7 @@ function renderImage(data) {
 
 function renderError(error) {
   const h1 = document.createElement('h1');
+  h1.style.color = 'red';
   document.body.appendChild(h1);
   h1.textContent = error;
 }
